@@ -103,7 +103,6 @@ header>h2{
     right:0;
     margin: 0 auto;
     text-align: center;
-
     font-size: 0.36rem;
     color: white;
 }
@@ -305,8 +304,8 @@ footer>ul>li>span{
     overflow: hidden;
     background: white;
     z-index: 999;
-    transform: translateX(-7.5rem);
-    /*transition: all 0.5s;*/
+    transform: scale(0,0);
+    transition: all 0.5s;
 }
 .search-header{
     width: 100%;

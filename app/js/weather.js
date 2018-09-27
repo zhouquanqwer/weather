@@ -94,8 +94,8 @@
     }
     //新的城市信息
     function ajaxs(con) {
-        $(".search").css({"transform":"translateX(-7.5rem)","transition": "all 0.5s"});
-        $(".main").css({"display":"block"});
+        $(".search").css({"transform": "scale(0,0)"});
+        //$(".main").css({"display":"block"});
         let url1 = "https://www.toutiao.com/stream/widget/local_weather/data/?city="+con;
         $.ajax({
             type:"get",
@@ -125,12 +125,12 @@ let arr = ["徐州","太原"];
         }
         //页面跳转
         $("header>h2").click(function () {
-            $(".search").css({"transform":"translateX(0)","transition": "all 0.5s"});
-            $(".main").css({"display":"none"});
+            $(".search").css({"transform": "scale(1,1)"});
+            //$(".main").css({"display":"none"});
         });
         $(".search-header>p>i").click(function () {
-            $(".search").css({"transform":"translateX(-7.5rem)","transition": "all 0.5s"});
-            $(".main").css({"display":"block"});
+            $(".search").css({"transform": "scale(0,0)"});
+           // $(".main").css({"display":"block"});
         });
         $(".search li").click(function () {
             con=$(this).html();
@@ -180,6 +180,12 @@ let arr = ["徐州","太原"];
         });
         // console.log(arr);
         arr.push(con);
+        console.log(arr.length);
+        //当历史多出3行时，每次添加时删除第一个
+        if(arr.length>9){
+            arr.shift();
+            $(".history>li").eq(0).remove();
+        }
         localStorage.setItem("historyCity",JSON.stringify(arr));
     }
 
