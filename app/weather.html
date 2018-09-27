@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>天气</title>
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <script src="./js/rem.js" type="text/javascript" charset="utf-8"></script>
+    <script src="./js/jquery-3.3.1.js"></script>
+    <link rel="stylesheet" href="./css/weather.css">
+    <link rel="stylesheet" href="./css/iconfont.css">
+    <script src="./js/weather.js"></script>
+</head>
+<body>
+    <div class="main">
+    <header>
+        <h2><i class="iconfont icon-dingwei"></i> <span>太原市 曲阳县</span></h2>
+        <div class="pic">
+            <img src="./img/pic.png" alt="">
+        </div>
+        <div class="pollution">
+            <p>空气</p>
+            <span>轻度污染</span>
+        </div>
+        <div class="weather">
+            <h1>0°</h1>
+            <p>晴</p>
+            <span>湿度 28%</span>
+        </div>
+        <p class="tips">天冷了,注意保暖~</p>
+        <img src="./img/screen.png" alt="">
+    </header>
+    <ul class="temperature">
+        <li>
+            <div class="temp-left">
+                <p>今天</p>
+                <p>晴转多云</p>
+            </div>
+            <div class="temp-right">
+                <p>2/-11℃</p>
+                <img class="right" src="./img/0.png" alt="">
+                <!--<div class="circle right"></div>-->
+            </div>
+        </li>
+        <li>
+            <div class="temp-left">
+                <p>明天</p>
+                <p>晴</p>
+            </div>
+            <div class="temp-right">
+                <p>3/-13℃</p>
+                <img class="right" src="./img/0.png" alt="">
+            </div>
+        </li>
+    </ul>
+    <div class="time">
+        <ul class="time-content">
+            <!--<li>-->
+                <!--<p>12:00</p>-->
+                <!--<img src="./img/0.png" alt="">-->
+                <!--<span>-1°</span>-->
+           <!--</li>-->
+            <!--<li>-->
+                <!--<p>13:00</p>-->
+                <!--<img src="./img/0.png" alt="">-->
+                <!--<span>-1°</span>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<p>14:00</p>-->
+                <!--<img src="./img/0.png" alt="">-->
+                <!--<span>-1°</span>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<p>15:00</p>-->
+                <!--<img src="./img/0.png" alt="">-->
+                <!--<span>-1°</span>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<p>16:00</p>-->
+                <!--<img src="./img/0.png" alt="">-->
+                <!--<span>-1°</span>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<p>17:00</p>-->
+                <!--<img src="./img/0.png" alt="">-->
+                <!--<span>-1°</span>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<p>18:00</p>-->
+                <!--<img src="./img/0.png" alt="">-->
+                <!--<span>-1°</span>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<p>19:00</p>-->
+                <!--<img src="./img/0.png" alt="">-->
+                <!--<span>-1°</span>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<p>20:00</p>-->
+                <!--<img src="./img/0.png" alt="">-->
+                <!--<span>-1°</span>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<p>21:00</p>-->
+                <!--<img src="./img/0.png" alt="">-->
+                <!--<span>-1°</span>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<p>22:00</p>-->
+                <!--<img src="./img/0.png" alt="">-->
+                <!--<span>-1°</span>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<p>23:00</p>-->
+                <!--<img src="./img/0.png" alt="">-->
+                <!--<span>-1°</span>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<p>24:00</p>-->
+                <!--<img src="./img/0.png" alt="">-->
+                <!--<span>-1°</span>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<p>1:00</p>-->
+                <!--<img src="./img/0.png" alt="">-->
+                <!--<span>-1°</span>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<p>2:00</p>-->
+                <!--<img src="./img/0.png" alt="">-->
+                <!--<span>-1°</span>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<p>3:00</p>-->
+                <!--<img src="./img/0.png" alt="">-->
+                <!--<span>-1°</span>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<p>4:00</p>-->
+                <!--<img src="./img/0.png" alt="">-->
+                <!--<span>-1°</span>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<p>5:00</p>-->
+                <!--<img src="./img/0.png" alt="">-->
+                <!--<span>-1°</span>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<p>6:00</p>-->
+                <!--<img src="./img/0.png" alt="">-->
+                <!--<span>-1°</span>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<p>7:00</p>-->
+                <!--<img src="./img/0.png" alt="">-->
+                <!--<span>-1°</span>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<p>8:00</p>-->
+                <!--<img src="./img/0.png" alt="">-->
+                <!--<span>-1°</span>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<p>9:00</p>-->
+                <!--<img src="./img/0.png" alt="">-->
+                <!--<span>-1°</span>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<p>10:00</p>-->
+                <!--<img src="./img/0.png" alt="">-->
+                <!--<span>-1°</span>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<p>11:00</p>-->
+                <!--<img src="./img/0.png" alt="">-->
+                <!--<span>-1°</span>-->
+            <!--</li>-->
+        </ul>
+    </div>
+    <div class="day">
+        <ul class="everyday">
+            <!--<li class="past">-->
+                <!--<p>昨天</p>-->
+                <!--<p>01/15</p>-->
+                <!--<span class="morning">晴</span>-->
+                <!--<div class="state1">-->
+                    <!--<img src="./img/1.png" alt="">-->
+                <!--</div>-->
+                <!--<div class="state2">-->
+                    <!--<img src="./img/31.png" alt="">-->
+                <!--</div>-->
+                <!--<span class="evening">多云</span>-->
+                <!--<p>西北风</p>-->
+                <!--<p>3级</p>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<p>昨天</p>-->
+                <!--<p>01/15</p>-->
+                <!--<span class="morning">晴</span>-->
+                <!--<div class="state1">-->
+                    <!--<img src="./img/1.png" alt="">-->
+                <!--</div>-->
+                <!--<div class="state2">-->
+                    <!--<img src="./img/31.png" alt="">-->
+                <!--</div>-->
+                <!--<span class="evening">多云</span>-->
+                <!--<p>西北风</p>-->
+                <!--<p>3级</p>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<p>昨天</p>-->
+                <!--<p>01/15</p>-->
+                <!--<span class="morning">晴</span>-->
+                <!--<div class="state1">-->
+                    <!--<img src="./img/1.png" alt="">-->
+                <!--</div>-->
+                <!--<div class="state2">-->
+                    <!--<img src="./img/31.png" alt="">-->
+                <!--</div>-->
+                <!--<span class="evening">多云</span>-->
+                <!--<p>西北风</p>-->
+                <!--<p>3级</p>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<p>昨天</p>-->
+                <!--<p>01/15</p>-->
+                <!--<span class="morning">晴</span>-->
+                <!--<div class="state1">-->
+                    <!--<img src="./img/1.png" alt="">-->
+                <!--</div>-->
+                <!--<div class="state2">-->
+                    <!--<img src="./img/31.png" alt="">-->
+                <!--</div>-->
+                <!--<span class="evening">多云</span>-->
+                <!--<p>西北风</p>-->
+                <!--<p>3级</p>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<p>昨天</p>-->
+                <!--<p>01/15</p>-->
+                <!--<span class="morning">晴</span>-->
+                <!--<div class="state1">-->
+                    <!--<img src="./img/1.png" alt="">-->
+                <!--</div>-->
+                <!--<div class="state2">-->
+                    <!--<img src="./img/31.png" alt="">-->
+                <!--</div>-->
+                <!--<span class="evening">多云</span>-->
+                <!--<p>西北风</p>-->
+                <!--<p>3级</p>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<p>昨天</p>-->
+                <!--<p>01/15</p>-->
+                <!--<span class="morning">晴</span>-->
+                <!--<div class="state1">-->
+                    <!--<img src="./img/1.png" alt="">-->
+                <!--</div>-->
+                <!--<div class="state2">-->
+                    <!--<img src="./img/31.png" alt="">-->
+                <!--</div>-->
+                <!--<span class="evening">多云</span>-->
+                <!--<p>西北风</p>-->
+                <!--<p>3级</p>-->
+            <!--</li>-->
+        </ul>
+    </div>
+    <footer>
+        <ul>
+            <li class="umbrella">
+                <div class="picture">
+                    <i class="iconfont icon-yusan"></i>
+                </div>
+                <p>不带伞</p>
+                <span>雨伞</span>
+            </li>
+            <li class="closed">
+                <div class="picture">
+                    <i class="iconfont icon-tshirt"></i>
+                </div>
+                <p>冷</p>
+                <span>穿衣</span>
+            </li>
+            <li class="sun">
+                <div class="picture">
+                    <i class="iconfont icon-taiyang"></i>
+                </div>
+                <p>较弱</p>
+                <span>防晒</span>
+            </li>
+            <li class="sick">
+                <div class="picture">
+                    <i class="iconfont icon-yao"></i>
+                </div>
+                <p>较易发</p>
+                <span>感冒</span>
+            </li>
+            <li class="sport">
+                <div class="picture">
+                    <i class="iconfont icon-basketball"></i>
+                </div>
+                <p>较不宜</p>
+                <span>运动</span>
+            </li>
+            <li class="clean">
+                <div class="picture">
+                    <i class="iconfont icon-xinxinicon"></i>
+                </div>
+                <p>较适宜</p>
+                <span>洗车</span>
+            </li>
+            <li class="fishing">
+                <div class="picture">
+                    <i class="iconfont icon-yu"></i>
+                </div>
+                <p>不宜</p>
+                <span>钓鱼</span>
+            </li>
+            <li class="traffic">
+                <div class="picture">
+                    <i class="iconfont icon-traffic-light"></i>
+                </div>
+                <p>良好</p>
+                <span>交通</span>
+            </li>
+
+        </ul>
+    </footer>
+    <p class="last">数据来源于中国天气网</p>
+</div>
+    <div class="search">
+        <div class="search-header">
+            <p><i class="iconfont icon-fanhui"></i> 腾讯天气</p>
+            <div class="search-text">
+                <input type="text"placeholder="搜索市、区、县等"><span>取消</span>
+            </div>
+
+        </div>
+        <div class="search-main">
+        <p>当前定位</p>
+        <ul>
+            <li class="location">太原</li>
+        </ul>
+        <p>历史纪录</p>
+        <ul class="history">
+            <!--<li class="location">拉萨</li>-->
+            <!--<li class="location">上海</li>-->
+        </ul>
+        <p>所有城市</p>
+        <ul class="hot">
+            <!--<li class="location">北京</li>-->
+            <!--<li class="location">上海</li>-->
+            <!--<li class="location">北京</li>-->
+            <!--<li class="location">上海</li>-->
+            <!--<li class="location">北京</li>-->
+            <!--<li class="location">上海</li>-->
+            <!--<li class="location">北京</li>-->
+            <!--<li class="location">上海</li>-->
+            <!--<li class="location">北京</li>-->
+            <!--<li class="location">上海</li>-->
+            <!--<li class="location">北京</li>-->
+            <!--<li class="location">上海</li>-->
+        </ul>
+    </div>
+    </div>
+</body>
+</html>
