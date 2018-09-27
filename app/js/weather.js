@@ -94,7 +94,7 @@
     }
     //新的城市信息
     function ajaxs(con) {
-        $(".search").css({"transform":"translateX(-7.5rem)"});
+        $(".search").css({"transform":"translateX(-7.5rem)","transition": "all 0.5s"});
         $(".main").css({"display":"block"});
         let url1 = "https://www.toutiao.com/stream/widget/local_weather/data/?city="+con;
         $.ajax({
@@ -125,11 +125,11 @@ let arr = ["徐州","太原"];
         }
         //页面跳转
         $("header>h2").click(function () {
-            $(".search").css({"transform":"translateX(0)"});
+            $(".search").css({"transform":"translateX(0)","transition": "all 0.5s"});
             $(".main").css({"display":"none"});
         });
         $(".search-header>p>i").click(function () {
-            $(".search").css({"transform":"translateX(-7.5rem)"});
+            $(".search").css({"transform":"translateX(-7.5rem)","transition": "all 0.5s"});
             $(".main").css({"display":"block"});
         });
         $(".search li").click(function () {

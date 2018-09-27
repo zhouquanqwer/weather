@@ -293,6 +293,9 @@ footer>ul>li>span{
     font-size: 0.24rem;
     color: #d3d3d3;
 }
+.main{
+    transition: all 0.5s;
+}
 .search{
     position: absolute;
     top:0;
@@ -303,7 +306,7 @@ footer>ul>li>span{
     background: white;
     z-index: 999;
     transform: translateX(-7.5rem);
-    transition: all 0.5s;
+    /*transition: all 0.5s;*/
 }
 .search-header{
     width: 100%;
