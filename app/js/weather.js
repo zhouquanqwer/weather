@@ -66,24 +66,25 @@
     }
     //添加城市
     let city;
+    let city1;
     $.ajax({
         type:"get",
         url:"https://www.toutiao.com/stream/widget/local_weather/city/",
         dataType:"jsonp",
         success:function (obj) {
-            city = obj.data;
-            updataCity(city);
+            city1 = obj.data;
+            updataCity(city1);
         }
     });
     let con ;
     function updataCity(city) {
-        for(let i in city){
+        for(let i in city1){
             // let ul = document.createElement("ul");
             let str1 = `
                 <p class="province">${i}</p>
                 `;
             $("ul.hot").append(str1);
-            for(let j in city[i]){
+            for(let j in city1[i]){
             let str = `
                 <li class="location">${j}</li>
                 `;
@@ -139,25 +140,25 @@ let arr = ["徐州","太原"];
             history(con)
         });
         //文本框输入
+        let i=0;
         $("input").focus(function () {
-            let flag =false;
             $(".search-text span").html("搜索");
+        });
             $(".search-text span").click(function () {
                 con = $("input").val();
-                for(let i in city){
-                    for(let j in city[i]){
+                let flag1;
+                for(let i in city1){
+                    for(let j in city1[i]){
                         if(j==con){
-                            flag=true;
-                            break;
+                            flag1 = true;
                         }
                     }
                 }
-                if(flag==true) {
+                if(flag1==true) {
                     ajaxs(con);
                     history(con);
                     $(".search-text span").html("取消");
                     $("input").val("");
-                     flag =false;
                     return;
                 }else{
                     $(".search-text span").html("取消");
@@ -166,7 +167,6 @@ let arr = ["徐州","太原"];
                     return;
                 }
             })
-        });
     };
     //历史纪录
     function history(con) {
@@ -180,7 +180,7 @@ let arr = ["徐州","太原"];
         });
         // console.log(arr);
         arr.push(con);
-        console.log(arr.length);
+        // console.log(arr.length);
         //当历史多出3行时，每次添加时删除第一个
         if(arr.length>9){
             arr.shift();
