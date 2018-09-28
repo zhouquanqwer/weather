@@ -44,7 +44,10 @@
         });
 
         let fweather = tianqi.weather.forecast_list;
-
+        console.log(fweather);
+        let arrdata=[];
+        let arrhigh=[];
+        let arrlow=[];
         for(let i = 0;i<6;i++){
             let str = `
                 <li>
@@ -62,7 +65,65 @@
                 </li>
             `;
             $(".everyday").append(str);
+            arrdata.push(fweather[i].date.slice(5,10));
+            arrhigh.push(fweather[i].high_temperature);
+            arrlow.push(fweather[i].low_temperature);
         }
+
+        // var myChart = echarts.init(document.getElementById('line'));
+        let myChart = echarts.init($(".line")[0]);
+        let option = {
+            title: {
+            },
+            tooltip: {},
+            legend: {
+                data:['最高温度','最低温度']
+            },
+            xAxis: {
+                data:arrdata,
+                show:false
+            },
+            yAxis: {
+                show:false
+            },
+            series: [{
+                itemStyle : {
+                    normal : {
+                        label : {show: true},
+                        color:'#FFB74D',
+                        lineStyle:{
+                            color:'#FFB74D'
+                        }
+                    }
+                },
+                name:'温度',
+                type: 'line',
+                data: arrhigh
+            },
+                {
+                    itemStyle : {
+                        normal : {
+                            label : {show: true},
+                            color:'#4FC3F7',
+                            lineStyle:{
+                                color:'#4FC3F7'
+                            }
+                        }
+                    },
+                    name:'温度',
+                    type: 'line',
+                    data: arrlow
+                }
+            ],
+        };
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+
+
+
+
+
     }
     //添加城市
     let city;
@@ -111,7 +172,7 @@
         })
     }
 
-let arr = ["徐州","太原"];
+    let arr = ["徐州","太原"];
     window.onload=function () {
         //历史存储
         let a = JSON.parse(localStorage.getItem("historyCity"));
